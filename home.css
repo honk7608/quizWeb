@@ -1,0 +1,28 @@
+main {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: calc(100vh - 4* var(--fs));
+}
+
+div.home {
+    height: 100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: calc(2 * var(--fs));
+
+    scroll-snap-align: center;
+}
+
+span {
+    display: block;
+    text-align: center;
+}
+
+span.grad {
+    width: fit-content;
+    background-clip: text !important;
+    color: transparent;
+}
