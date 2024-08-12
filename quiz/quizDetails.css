@@ -1,0 +1,124 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 4* var(--fs));
+    box-sizing: border-box;
+
+    padding: calc(2 * var(--fs));
+}
+
+div.gridD {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto auto;
+    gap: var(--fs);
+}
+
+div.gridD > * { 
+    position: relative;
+    padding: var(--fs);
+    height: calc(15 * var(--fs));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border-radius: var(--fs);
+    color: black;
+}
+
+/* Before (Options) */
+
+div.gridD > form.options {
+    aspect-ratio: 3/1;
+    border: 2px #9dFF00 solid;
+    
+    display: flex;
+}
+
+div.gridD > form.options div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--fs);
+    gap: calc(2 * var(--fs));
+    width: 100%;
+    box-sizing: border-box;
+
+    font-weight: 700;
+    font-size: calc(1.5 * var(--fs));
+
+    border-bottom: 2px var(--theme-color) solid;
+}
+
+div.gridD > form.options div:nth-child(3) {
+    border-bottom: none;
+}
+
+div.gridD form.options input#done {
+    background-color: var(--theme-color);
+    outline: none;
+    border: none;
+    width: 100%;
+
+    font-weight: 700;
+    font-size: calc(2 * var(--fs));
+    text-align: center;
+}
+/* Ing */
+
+div.gridD > div.problem {
+    aspect-ratio: 2/1;
+    border: 2px #9dFF00 solid;
+}
+
+div.gridD > div.ans {
+    aspect-ratio: 1/1;
+    background-color: #9DFF0055;
+    gap: var(--fs);
+
+}
+
+div.gridD div.problem div.eng, div.gridD div.problem div.kor { 
+    font-weight: 700;
+    font-size: calc(1.5 * var(--fs));
+}
+
+div.gridD div.problem div.mean { 
+    font-weight: 500;
+    font-size: calc(1 * var(--fs));
+    text-align: center;
+    width: 100%;
+}
+
+div.gridD div.ans div.guide { 
+    font-weight: 900;
+    font-size: calc(1.5 * var(--fs));
+    text-align: left;
+    width: 100%;
+}
+
+div.gridD div.ans input#ans { 
+    background-color: white;
+    outline: none;
+    border: none;
+    border-bottom: #9dFF00 2px solid;
+    width: 100%;
+    
+    font-weight: 700;
+    font-size: calc(2 * var(--fs));
+    text-align: center;
+}
+
+div.gridD div.ans input#done {
+    background-color: var(--theme-color);
+    outline: none;
+    border: none;
+    width: 100%;
+
+    font-weight: 700;
+    font-size: calc(2 * var(--fs));
+    text-align: center;
+}
