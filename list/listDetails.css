@@ -1,0 +1,38 @@
+main {
+    display: flex;
+    flex-direction: column;
+    padding: calc(2 * var(--fs));
+}
+
+main div.word {
+    display: grid;
+    width: 100%;
+    padding: var(--fs);
+    box-sizing: border-box;
+    grid-template-columns: auto auto 1fr;
+    column-gap: calc(0.5 * var(--fs));
+
+    border-bottom: solid 2px var(--theme-color);
+}
+
+main div.word:last-child {
+    border-bottom: none;
+}
+
+main div.word div.eng {
+    width: fit-content;
+}
+
+main div.word div.kor, main div.word div.eng {
+    font-weight: 700;
+    font-size: calc((1.5 * var(--fs)));
+}
+
+main div.word div.mean {
+    display: flex;
+
+    font-weight: 500;
+    font-size: calc((1 * var(--fs)));
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
