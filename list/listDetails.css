@@ -12,7 +12,7 @@ main div.word {
     grid-template-columns: auto auto 1fr;
     column-gap: calc(0.5 * var(--fs));
 
-    border-bottom: solid 2px var(--theme-color);
+    border-bottom: solid 2px var(--thm-c);
 }
 
 main div.word:last-child {

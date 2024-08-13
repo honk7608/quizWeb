@@ -20,8 +20,8 @@ div.gridD a {
     width: calc(15 * var(--fs));
 
     border-radius: var(--fs);
-    background-color: #9DFF0055;
-    color: black;
+    background-color: var(--thm-tc);
+    color: var(--txt-c);
 }
 
 div.gridD a div.title { 
