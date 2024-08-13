@@ -4,6 +4,10 @@ main {
     height: calc(100vh - 4* var(--fs));
 }
 
+main::-webkit-scrollbar {
+    display: none;
+}
+
 div.home {
     height: 100%;
     display: flex;
@@ -14,6 +18,10 @@ div.home {
     font-size: calc(2 * var(--fs));
 
     scroll-snap-align: center;
+}
+
+div.home div {
+    display: flex;
 }
 
 span {
