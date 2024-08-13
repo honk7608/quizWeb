@@ -89,6 +89,7 @@ header div.hlist a {
 main {
     min-height: calc(100vh - 4* var(--fs));
     margin-top: calc(4 * var(--fs));
+    box-sizing: border-box;
 }
 
 /* Footer */

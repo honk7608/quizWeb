@@ -3,7 +3,6 @@ main {
     align-items: center;
     justify-content: center;
     height: fit-content;
-    box-sizing: border-box;
 }
 
 div.gridD {
