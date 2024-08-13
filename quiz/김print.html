@@ -24,86 +24,10 @@
     </header>
     <main>
         <div class="gridD">
-            <form class="options" id="options">
-                <div>
-                    방향 
-                    <label for="kte"><input type="radio" name="mode" id="kte" value="1" form="options">kor to eng</label>
-                    <label for="etk"><input type="radio" name="mode" id="etk" value="2" form="options">eng to kor</label>
-                </div>
-
-                <div>
-                    <label for="mean"><input type="checkbox" name="mean" id="mean" form="options"> 영영풀이 보이기</label>
-                </div>
-
-                <div>
-                    <label for="timer"><input type="checkbox" name="timer" id="timer" form="options"> 타이머 보이기</label>
-                </div>
-
-                <input type="submit" value="시작하기" id="done" form="options">
-            </div>
-            <!-- <div class="problem">
-                <div class="kor">사건</div>
-                <div class="eng">case</div>
-                <div class="mean">a crime that the police are trying to solve, or a problem that someone has</div>
-            </div>
-            <div class="ans">
-                <div class="guide">뜻:</div>
-                <input type="text" name="ans" id="ans">
-                <input type="submit" name="done" id="done" value="정답 제출하기">
-            </div> -->
         </div>
     </main>
-    <script>
-        mainEl = document.getElementsByTagName("main")[0]
-        var words = [{"eng":"case","kor":"사건","mean":"a crime that the police are trying to solve, or a problem that someone has"},
-{"eng":"rush","kor":"서두르다","mean":"to hurry in order to get somewhere very quickly"},
-{"eng":"obviously","kor":"명백하게","mean":"in a way that is clear for almost anyone to see or understand"},
-{"eng":"desperately","kor":"절망적으로","mean":"in a very worried or angry way"},
-{"eng":"scandal","kor":"스캔들","mean":"talk or reports in the newspapers about shocking events "},
-{"eng":"break someone's heart","kor":"마음을 찢어지게 하다","mean":"to upset someone very much, especially by doing something bad "},
-{"eng":"charge","kor":"기소하다, 고발하다, 비난하다","mean":"to accuse someone officially of committing a crime. If you commit a crime, you do something legally wrong."},
-{"eng":"investigate","kor":"조사하다","mean":"to try to find out the facts about something in order to learn the truth about it "},
-{"eng":"fierce","kor":"사나운","mean":"very angry, or ready to attack"},
-{"eng":"lung","kor":"폐","mean":"one of the two organs in your chest that fill with air when you breathe "},
-{"eng":"legal","kor":"법률적인","mean":"relating to the law or lawyers"},
-{"eng":"search","kor":"찾다","mean":"to try to find something or someone by looking carefully"},
-{"eng":"suspect","kor":"용의자","mean":"someone who the police believe may have committed a crime. If someone suspects someone of something. they believe that someone has done something, usually something bad."},
-{"eng":"district","kor":"구역","mean":"one of the areas into which a town or country is divided for official purposes"},
-{"eng":"firm","kor":"회사","mean":"a business or company"},
-{"eng":"except for","kor":"~을 제외하고","mean":"used for introducing the only person, thing or fact that is not included in your main statement"},
-{"eng":"fear the worst","kor":"최악의 경우를 생각하다","mean":"to fear that something very bad has happened to someone or that they could be dead"},
-{"eng":"arrest","kor":"체포하다","mean":"If the police arrest someone, they take that person to a police station because they believe he or she has committed a crime."},
-{"eng":"protect","kor":"보호하다","mean":"to keep someone or something safe from harm, injury, damage or loss"}]
-        var correctWords = []
-        var wrongWords = []
-        var n = 1;
-        
-        function option() {
-            mainEl.innerHTML = 
-            ``;
-        }
-        function next() {}
-        function results() {}
-
-        formEl = document.getElementsByTagName("form")[0];
-        formEl.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(formEl);
-
-            console.log(formData.get("mode"));
-            console.log(formData.get("mean"));
-            console.log(formData.get("timer"));
-            mainEl.innerHTML = ''
-        })
-
-        formEl.addEventListener("formdata", (e) => {
-            const formData = e.formData;
-            formData.set("mode", formData.get("mode"));
-            formData.set("mean", formData.get("mean"));
-            formData.set("timer", formData.get("timer"));
-        });
-    </script>
+    <script src="./quiz.js"></script>
+    <script src="./김print.js"></script>
     <footer>
         Made by Honk
     </footer>
