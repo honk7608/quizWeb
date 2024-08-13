@@ -36,3 +36,13 @@ main div.word div.mean {
     grid-column-start: 1;
     grid-column-end: 4;
 }
+
+@media screen and (max-width: 800px) {
+    main div.word div.kor, main div.word div.eng {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    main div.word div:nth-child(2) {
+        display: none;
+    }
+}

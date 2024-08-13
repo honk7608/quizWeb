@@ -199,7 +199,8 @@ div.gridD div.cnt {
     gap: var(--fs);
     font-weight: 700;
     font-size: calc(1.5 * var(--fs));
-}
+    position: sticky;
+    top: calc((100vh - 17*var(--fs))/2);
 
     div {
         padding: calc(0.5 * var(--fs));
@@ -267,19 +268,73 @@ div.gridD div.list {
     }
 }
 
+@media screen and (max-width: 800px) {
+    div.gridD {
+        padding: var(--fs);
+        width: 100vw;
+
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto auto;
+    }
     
-    font-weight: 700;
-    font-size: calc(2 * var(--fs));
-    text-align: center;
-}
+    div.gridD > * {
+        aspect-ratio: unset;
+        width: 100% !important;
+        height: fit-content;
+        
+        grid-column-start: 1;
+        grid-column-end: 3;
+        box-sizing: border-box;
+    }
+    
+    /* Options */
+    div.gridD form.options {
+        aspect-ratio: 1/1;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        justify-content: space-evenly;
+        div {
+            flex-direction: column;
+            gap: var(--fs);
+            border-bottom: none;
+            background-color: var(--thm-tc);
+        }
+    }
 
-div.gridD div.ans input#done {
-    background-color: var(--theme-color);
-    outline: none;
-    border: none;
-    width: 100%;
+    /* Ing */
 
-    font-weight: 700;
-    font-size: calc(2 * var(--fs));
-    text-align: center;
+    div.gridD div.problem {
+        aspect-ratio: 4/1;
+    }
+
+    div.gridD div.ans {
+        aspect-ratio: unset;
+        form#ansForm {
+            width: 100%;
+            height: max-content;
+        }
+    } 
+
+    div.gridD div#progress {
+        position: relative;
+        top: unset;
+        right: unset;
+        transform: none;
+        height: fit-content;
+    }
+
+    /* Results */
+
+    div.gridD div.cnt {
+        position: relative;
+        top: unset;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        aspect-ratio: unset;
+        
+        div{
+            text-align: center;
+        }
+    }
 }

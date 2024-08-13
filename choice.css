@@ -41,3 +41,16 @@ div.gridD a div.arrow {
     right: var(--fs);
     bottom: var(--fs);
 }
+
+@media screen and (max-width: 800px) {
+    div.gridD {
+        padding-top: var(--fs);
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+    }
+    div.gridD a { 
+        scroll-snap-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

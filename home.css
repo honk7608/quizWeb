@@ -34,3 +34,17 @@ span.grad {
     background-clip: text !important;
     color: transparent;
 }
+
+@media screen and (max-width: 800px) {
+    div.home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.home div {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}

@@ -103,3 +103,21 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+
+@media screen and (max-width: 800px) {
+    header {
+        flex-direction: column;   
+        gap: 0;
+        height: calc(6*var(--fs));
+        justify-content: space-evenly;
+    }
+    header div.hlist {
+        width: 100%;
+        justify-content: center;
+    }
+    main {
+        margin-top: calc(6*var(--fs));
+        min-height: calc(100vh - 6 * var(--fs)); 
+    }
+}
