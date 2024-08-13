@@ -126,7 +126,6 @@ div.gridD div.ans {
         width: 100%;
     }
     input#ans { 
-        background-color: white;
         outline: none;
         border: none;
         padding: calc(0.5 * var(--fs));
@@ -137,14 +136,17 @@ div.gridD div.ans {
         font-weight: 700;
         font-size: calc(1 * var(--fs));
         text-align: center;
+
+        background-color: var(--bg-c);
+        color: var(--txt-c);
     }
     input#ans.correct { 
-        background-color: var(--txt-c);
+        background-color: black;
         color: var(--o-c);
     }
     
     input#ans.wrong { 
-        background-color: var(--txt-c);
+        background-color: black;
         color:var(--x-c);
     }
     input#done, button#continue {
