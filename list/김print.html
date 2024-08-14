@@ -22,21 +22,10 @@
             </a>
         </ul>
     </header>
-    <main>      
-        <script src="../quiz/김print.js"></script>
-        <script>
-            mainEl = document.getElementsByTagName("main")[0]
-            for (i in words) {
-                mainEl.innerHTML += 
-                `<div class="word">
-                    <div class="eng">${words[i].eng.join(', ')}</div>
-                    <div style="color: var(--thm-c); font-size: calc((1.5 * var(--fs)));">|</div>
-                    <div class="kor">${words[i].kor.join(', ')}</div>
-                    <div class="mean">${words[i].mean.replaceAll('<br/>', ' ')}</div>
-                </div>`;
-            }
-        </script>
+    <main>  
     </main>
+    <script src="./list.js"></script>
+    <script src="../quiz/김print.js"></script>
     <footer>
         Made by Honk
     </footer>
