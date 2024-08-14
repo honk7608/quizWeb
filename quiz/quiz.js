@@ -11,7 +11,6 @@ function main(words) {
     var problemType = "";
     var ansType = "";
     var showMean = false;
-    var showTime = false;
     var mode = 1; 
 
     // 추가 세팅 (재시도 시 변경 가능)
@@ -191,10 +190,6 @@ function main(words) {
                 <label for="mean"> <input type="checkbox" name="mean" id="mean" form="options"> 영영풀이 보이기</label>
             </div>
 
-            <div>
-                <label for="timer"> <input type="checkbox" name="timer" id="timer" form="options"> 타이머 보이기</label>
-            </div>
-
             <input type="submit" value="시작하기" id="done" form="options">
         </div>`;
         
@@ -210,7 +205,6 @@ function main(words) {
             if(mode == 1) {problemType = 'kor'; ansType = 'eng';}
             else {problemType = 'eng'; ansType = 'kor';}
             showMean = formData.get("mean")=='true';
-            showTime = formData.get("timer")=='false';
             
             start();
         })
