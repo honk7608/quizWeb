@@ -1,6 +1,6 @@
 /**
  * 퀴즈 종합 함수
- * @param {{eng: string[], kor: string[], mean: string, submit: string}[]} words 
+ * @param {{eng: string[], kor: string[], korAccept: string[], korMain: string[]  mean: string, submit: string}[]} words 
  */
 function main(words) {
  
@@ -9,7 +9,9 @@ function main(words) {
     var gridEl = document.getElementsByClassName("gridD")[0]
 
     var problemType = "";
+    var problemShownType = "";
     var ansType = "";
+    var ansShownType = "";
     var showMean = false;
     var showTime = false;
     var mode = 1; 
@@ -49,29 +51,29 @@ function main(words) {
     /**
      * 다음 문제 생성
      * @param {Event} e
-     * @returns {none}
      */
     function next(e) {
         if(e) e.preventDefault();
         if(words.length == 0) return results();
         
         // 돌려놓기
+        document.addEventListener("keypress", enterCheckAnsCallback)
+        document.removeEventListener("keypress", enterNextCallback)
+        
         inputEl.disabled = false;
         inputEl.value = ''
         inputEl.className = null;
 
         doneButtonEl.style.display = 'block';
-        ansFormEl.onsubmit = checkAns;
+        doneButtonEl.onclick = checkAns;
         continueButtonEl.style.display = 'none';
         continueButtonEl.onclick = null;
-        document.removeEventListener("keypress", enterNextCallback)
-        document.addEventListener("keypress", enterCheckAnsCallback)
 
         // 새 문제 세팅
         index = Math.floor(Math.random() * words.length);
         
         probEl.innerHTML = ''
-        probEl.innerHTML = words[index][problemType].join(',&nbsp;');
+        probEl.innerHTML = words[index][problemShownType].join(',&nbsp;');
         if(showMean) meanEl.innerHTML = words[index].mean;
     }
 
@@ -81,22 +83,24 @@ function main(words) {
      */
     function checkAns(e) {
         if(e) e.preventDefault();
-
+        
+        // 돌려놓기
+        document.addEventListener("keypress", enterNextCallback)
+        document.removeEventListener("keypress", enterCheckAnsCallback)
+        
         inputEl.disabled = true;
 
         doneButtonEl.style.display = 'none';
-        ansFormEl.onsubmit = null;
+        doneButtonEl.onsubmit = null;
         continueButtonEl.style.display = 'block';
         continueButtonEl.onclick = next;
-        document.removeEventListener("keypress", enterCheckAnsCallback)
-        document.addEventListener("keypress", enterNextCallback)
 
         // 정답 확인
         inputAns = inputEl.value
         rightAns = words[index][ansType]
         words[index].submit = inputAns;
         if(rightAns.includes(inputAns)) {inputEl.className = "correct"; correctWords.push(words.splice(index, 1)[0]);}
-        else {inputEl.className = "wrong"; probEl.innerHTML += `&nbsp;<span class='corrAns'>&nbsp;${words[index][ansType]}&nbsp;</span>`; wrongWords.push(words.splice(index, 1)[0]);}
+        else {inputEl.className = "wrong"; probEl.innerHTML += `&nbsp;<span class='corrAns'>&nbsp;${words[index][ansShownType].join(`&nbsp;</span>&nbsp;<span class='corrAns'>&nbsp;`)}&nbsp;</span>`; wrongWords.push(words.splice(index, 1)[0]);}
 
         // 진척도 표시
         progressEl.innerHTML = `${allCnt}개 단어 중 &nbsp;<span class="corrCnt">&nbsp;${correctWords.length}개 정답&nbsp;</span>&nbsp;<span class="wrongCnt">&nbsp;${wrongWords.length}개 오답&nbsp;</span>&nbsp;<span class="leftCnt">&nbsp;${words.length}개 남음&nbsp;</span>`
@@ -109,7 +113,7 @@ function main(words) {
     function start() {
         gridEl.innerHTML = 
         `<div id="progress">
-            ${allCnt}개 단어 중 &nbsp;<span class="corrCnt">&nbsp;0개 정답&nbsp;</span>&nbsp;<span class="wrongCnt">&nbsp;0개 오답&nbsp;</span>&nbsp;<span class="leftCnt">&nbsp;0개 남음&nbsp;</span>
+            ${allCnt}개 단어 중 &nbsp;<span class="corrCnt">&nbsp;0개 정답&nbsp;</span>&nbsp;<span class="wrongCnt">&nbsp;0개 오답&nbsp;</span>&nbsp;<span class="leftCnt">&nbsp;${allCnt}개 남음&nbsp;</span>
         </div>
         <div class="problem">
             <div class="prob"> 문제 </div>
@@ -126,12 +130,17 @@ function main(words) {
         probEl = document.getElementsByClassName("prob")[0];
         meanEl = document.getElementsByClassName("mean")[0];
         ansFormEl = document.getElementById("ansForm");
-        ansFormEl.onsubmit = checkAns;
+        ansFormEl.onsubmit = (e) => {e.preventDefault();};
         inputEl = document.getElementById("ans");
         doneButtonEl = document.getElementById("done");
+        doneButtonEl.onclick = checkAns;
         continueButtonEl = document.getElementById("continue");
         continueButtonEl.onclick = next;
         progressEl = document.getElementById("progress");
+
+        for(i in words) {
+            words[i].kor = words[i].korMain.concat(words[i].korAccept)
+        }
 
         next();
     };
@@ -153,12 +162,12 @@ function main(words) {
                 <tr class="legends Head"><td>문제</td><td>정답</td><td>제출 답안</td></tr>
                 <tr class="correct Head"><td colspan="3">맞춘 단어</td></tr>`
         for(i in correctWords) {
-            listText += `<tr class="correct Li ${(i==correctWords.length-1)?'last':''}"><td>${correctWords[i][problemType].join(', ')}</td><td>${correctWords[i][ansType].join(', ')}</td><td>${correctWords[i].submit}</td></tr>`;
+            listText += `<tr class="correct Li ${(i==correctWords.length-1)?'last':''}"><td>${correctWords[i][problemShownType].join(', ')}</td><td>${correctWords[i][ansShownType].join(', ')}</td><td>${correctWords[i].submit}</td></tr>`;
         }
         listText += 
         `       <tr class="wrong Head"><td colspan="3">틀린 단어</td></tr>`
         for(i in wrongWords) {
-            listText += `<tr class="wrong Li ${(i==wrongWords.length-1)?'last':''}"><td>${wrongWords[i][problemType].join(', ')}</td><td>${wrongWords[i][ansType].join(', ')}</td><td>${wrongWords[i].submit}</td></tr>`;
+            listText += `<tr class="wrong Li ${(i==wrongWords.length-1)?'last':''}"><td>${wrongWords[i][problemShownType].join(', ')}</td><td>${wrongWords[i][ansShownType].join(', ')}</td><td>${wrongWords[i].submit}</td></tr>`;
         }
         listText += 
         `   </tbody></table>
@@ -207,8 +216,8 @@ function main(words) {
             const formData = new FormData(optionFormEl);
             
             mode = formData.get("mode")
-            if(mode == 1) {problemType = 'kor'; ansType = 'eng';}
-            else {problemType = 'eng'; ansType = 'kor';}
+            if(mode == 1) {problemType = 'kor'; problemShownType = 'korMain'; ansType = 'eng'; ansShownType = 'eng';}
+            else {problemType = 'eng'; problemShownType = 'eng'; ansType = 'kor'; ansShownType='korMain';}
             showMean = formData.get("mean")=='true';
             showTime = formData.get("timer")=='false';
             
