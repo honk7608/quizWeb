@@ -4,6 +4,56 @@ main {
     padding: calc(2 * var(--fs));
 }
 
+main div.info {
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--fs);
+    border-radius: var(--fs);
+    background-color: var(--thm-tc);
+
+    position: relative;
+
+    font-size: calc(1 * var(--fs));
+    font-weight: 700;
+
+    transition: all ease-out 0.2s;
+}
+
+main div.info:has(input#infoCheck:checked) {
+    padding-bottom: calc(5 * var(--fs));
+}
+
+main div.info input#infoCheck+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    font-size: calc(1.5 * var(--fs));
+    border-bottom: 2px solid var(--thm-c);
+    background-color: transparent;
+}
+
+main div.info input#infoCheck+label+div {
+    position: absolute;
+    display: flex;
+
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(5 * var(--fs));
+    opacity: 0;
+
+    transform: translateY(calc(-1 * var(--fs)));
+    transition: all 0.1s 0s;
+}
+
+main div.info input#infoCheck:checked+label+div {
+    opacity: 1;
+
+    transform: translateY(0);
+    transition: all 0.1s 0.15s;
+}
+
 main div.word {
     display: grid;
     width: 100%;
@@ -26,7 +76,38 @@ main div.word div.eng {
 main div.word div.kor, main div.word div.eng {
     font-weight: 700;
     font-size: calc((1.5 * var(--fs)));
+    display: flex;
+    align-items: center;
+    gap: var(--fs);
 }
+
+main div.word div.kor div.korAccept {
+    display: flex;
+    gap: calc(0.1 * var(--fs));
+    align-items: center;
+    justify-content: center;
+    padding: calc(0.1 * var(--fs));
+
+    font-size: var(--fs);
+    color: var(--thm-c);
+    
+    transition: all 0.1s;
+}
+
+main div.word div.kor div.korAccept div:last-child {
+    opacity: 0;
+    color: var(--txt-c);
+    border-bottom: 2px solid transparent;
+    transition: inherit;
+}
+
+main div.word div.kor div.korAccept:hover div:last-child {
+    display: block;
+    opacity: 1;
+    border-bottom: 2px solid var(--thm-tc);
+}
+
+
 
 main div.word div.mean {
     display: flex;
