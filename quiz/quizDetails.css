@@ -97,7 +97,7 @@ div.gridD div.problem {
         font-weight: 700;
         font-size: calc(1.5 * var(--fs));
         span.corrAns {
-            color: var(--bg-c);
+            color: white;
             background-color: var(--thm-c);
         }
     }
@@ -160,7 +160,7 @@ div.gridD div.ans {
         outline: none;
         border: none;
         background-color: var(--thm-c);
-        color: var(--bg-c);
+        color: white;
     }
 }
 
