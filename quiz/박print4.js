@@ -1,0 +1,30 @@
+var words = [
+    {"korAccept": [], "eng": ["boujee"], "korMain": [""], "mean": "someone rich, someone that owns nice things"}, 
+    {"korAccept": [], "eng": ["rent-free"], "korMain": [""], "mean": "Something or someone that you can't stop thinking about"}, 
+    {"korAccept": [], "eng": ["sus"], "korMain": [""], "mean": "Something or someone that is suspicious"}, 
+    {"korAccept": [], "eng": ["locked in"], "korMain": [""], "mean": "focused on something"}, 
+    {"korAccept": [], "eng": ["mid"], "korMain": [""], "mean": "something is good, but not great"}, 
+    {"korAccept": [], "eng": ["pookie"], "korMain": [""], "mean": "someone you love, a best friend"}, 
+    {"korAccept": [], "eng": ["delulu"], "korMain": [""], "mean": "delusional/crazy"}, 
+    {"korAccept": [], "eng": ["cap"], "korMain": [""], "mean": "not true"}, 
+    {"korAccept": [], "eng": ["rizz"], "korMain": [""], "mean": "charisma"}, 
+    {"korAccept": [], "eng": ["rizzler"], "korMain": [""], "mean": "someone good at flirting"}, 
+    {"korAccept": [], "eng": ["tea/spill the tea"], "korMain": [""], "mean": "gossip"}, 
+    {"korAccept": [], "eng": ["bussin"], "korMain": [""], "mean": "food that is really good"}, 
+    {"korAccept": [], "eng": ["touch grass"], "korMain": [""], "mean": "Something you say to someone that spends too much time online"}, 
+    {"korAccept": [], "eng": ["it's giving..."], "korMain": [""], "mean": "When someone gives off a certain vibe (feeling)"}, 
+    {"korAccept": [], "eng": ["piece of cake"], "korMain": [""], "mean": "really easy"}, 
+    {"korAccept": [], "eng": ["run behind/late"], "korMain": [""], "mean": "To be late to something"}, 
+    {"korAccept": [], "eng": ["hang of it"], "korMain": [""], "mean": "to learn something"}, 
+    {"korAccept": [], "eng": ["broken record"], "korMain": [""], "mean": "someone that repeats something a lot"}, 
+    {"korAccept": [], "eng": ["pitch in"], "korMain": [""], "mean": "to offer help"}, 
+    {"korAccept": [], "eng": ["rocket science"], "korMain": [""], "mean": "something that is difficult; usually said when the problem isn't actually difficult"}, 
+    {"korAccept": [], "eng": ["cutting corners"], "korMain": [""], "mean": "doing something wrong to save time/money"}, 
+    {"korAccept": [], "eng": ["pull someone's leg/yanking your chain"], "korMain": [""], "mean": "to joke with someone"}, 
+    {"korAccept": [], "eng": ["on the fence"], "korMain": [""], "mean": "can't decide"}, 
+    {"korAccept": [], "eng": ["take it with a pinch/grain of salt"], "korMain": [""], "mean": "don't fully believe what you hear"}, 
+    {"korAccept": [], "eng": ["say less"], "korMain": [""], "mean": "\"Iets go\", \"yes\", said when someone is asking you to go somewhere or do something you think is fun"}, 
+    {"korAccept": [], "eng": ["jump the gun"], "korMain": [""], "mean": "doing something too fast and realizing you were wrong"}
+    ];
+
+main(words);
