@@ -83,7 +83,7 @@ div.gridD form.options {
         outline: none;
         border: none;
         background-color: var(--thm-c);
-        color: var(--bg-c);
+        color: white;
     }
 }
 
@@ -226,7 +226,7 @@ div.gridD div.cnt {
         outline: none;
         border: none;
         background-color: var(--thm-c);
-        color: var(--bg-c);
+        color: white;
     }
 }
 
