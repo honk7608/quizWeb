@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영단어 혼공앱</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="./listDetails.css">
+</head>
+<body>
+    <header>
+        <a class="title" href="../index.html">
+            Vocab of SASA 10th
+        </a>
+        <div class="hlist">
+            <a href="../list.html">
+                단어장 확인하기
+            </a>
+            <a href="../quiz.html">
+                단어 외우기
+            </a>
+        </ul>
+    </header>
+    <main>  
+    </main>
+    <script>
+        /**
+         * 목록 종합 함수
+         * @param {{eng: string[], kor: string[], korAccept: string[], korMain: string[]  mean: string, submit: string}[]} words 
+         */
+        function main(words) {
+            mainEl = document.getElementsByTagName("main")[0]
+            mainEl.innerHTML = 
+            `<div class="info">
+                <input id="infoCheck" type="checkbox" style="display: none;">
+                <label for="infoCheck"><div>이용안내 확인하기</div><div></div></label>
+                <div>
+                    <div>프린트의 빈칸을 채우는 형식입니다.</div>
+                    <div>위에 적혀있는 영단어는 (???) 안에 들어가는 단어입니다.</div>
+                </div>
+            </div>
+            `
+            for (i in words) {
+                mainEl.innerHTML += 
+                `<div class="word">
+                    <div class="eng">${words[i].eng.join(', ')}</div>
+                    <div style="color: var(--thm-c); font-size: calc((1.5 * var(--fs)));">|</div>
+                    <div class="kor"></div>
+                    <div class="mean">${words[i].mean.replaceAll('<br/>', ' ')}</div>
+                </div>`;
+            }
+        }
+    </script>
+    <script src="../quiz/박print3.js"></script>
+    <footer>
+        Made by Honk
+    </footer>
+</body>
+</html>
