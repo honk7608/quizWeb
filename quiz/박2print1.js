@@ -19,7 +19,7 @@ var words = [
     {'eng': ['approval'], 'korMain': ['승인'], 'korAccept': [], 'mean': ''},
     {'eng': ['spike'], 'korMain': ['극파'], 'korAccept': [], 'mean': ''},
     {'eng': ['skeptical', 'sceptical'], 'korMain': ['회의적인'], 'korAccept': [], 'mean': ''},
-    {'eng': ['boewl'], 'korMain': ['장'], 'korAccept': [], 'mean': ''},
+    {'eng': ['bowel'], 'korMain': ['장'], 'korAccept': [], 'mean': ''},
     {'eng': ['vowel'], 'korMain': ['모음'], 'korAccept': [], 'mean': ''},
     {'eng': ['consonant'], 'korMain': ['자음'], 'korAccept': [], 'mean': ''},
     {'eng': ['bladder'], 'korMain': ['방광'], 'korAccept': [], 'mean': ''},
