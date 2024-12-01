@@ -95,9 +95,10 @@ function main(words) {
 
         // 정답 확인
         inputAns = inputEl.value
-        if(ansType = 'eng') inputAns = inputAns.toLowerCase();
+        if(ansType == 'eng') inputAns = inputAns.toLowerCase();
         rightAns = words[index][ansType]
         words[index].submit = inputAns;
+        console.log(rightAns, inputAns, words[index], ansType);
         if(rightAns.includes(inputAns)) {inputEl.className = "correct"; correctWords.push(words.splice(index, 1)[0]);}
         else {inputEl.className = "wrong"; probEl.innerHTML += `&nbsp;<span class='corrAns'>&nbsp;${words[index][ansShownType].join(`&nbsp;</span>&nbsp;<span class='corrAns'>&nbsp;`)}&nbsp;</span>`; wrongWords.push(words.splice(index, 1)[0]);}
 
@@ -214,6 +215,7 @@ function main(words) {
             mode = formData.get("mode")
             if(mode == 1) {problemType = 'kor'; ansType = 'eng'; problemShownType = 'korMain'; ansShownType = 'eng';}
             else {problemType = 'eng'; ansType = 'kor'; problemShownType = 'eng'; ansShownType = 'korMain';}
+            console.log(mode, problemType, ansType)
             showMean = formData.get("mean")=='true';
             
             start();
