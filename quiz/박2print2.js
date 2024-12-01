@@ -24,7 +24,7 @@ var words = [
     {'eng': ['intangible'], 'korMain': ['무형의', '뭐라고 말할 수 없는'], 'korAccept': [], 'mean': ''},
     {'eng': ['inferiority complex'], 'korMain': ['열등 의식'], 'korAccept': [], 'mean': ''},
     {'eng': ['refute'], 'korMain': ['반박하다'], 'korAccept': ['논박하다'], 'mean': ''},
-    {'eng': ['refutation'], 'korMain': ['반박'], 'korAccept': ['논 박'], 'mean': 'The error is too obvious to require a particular refutation '},
+    {'eng': ['refutation'], 'korMain': ['반박'], 'korAccept': ['논박'], 'mean': 'The error is too obvious to require a particular refutation '},
     {'eng': ['ward off'], 'korMain': ['물리치다', '막다'], 'korAccept': [], 'mean': 'ward off danger/evil spirits '},
     {'eng': ['rowdy'], 'korMain': ['소란스러운', '난폭한'], 'korAccept': [], 'mean': ''},
     {'eng': ['at one’s expense'], 'korMain': ['~의 희생으로'], 'korAccept': [], 'mean': ''},
