@@ -32,7 +32,7 @@ var words = [
     {'eng': ['mentally retarded'], 'korMain': ['정신박약'], 'korAccept': ['정신지체'], 'mean': ''},
     {'eng': ['infuriate'], 'korMain': ['분노하게 만들다'], 'korAccept': [], 'mean': ''},
     {'eng': ['illiteracy'], 'korMain': ['문명'], 'korAccept': [], 'mean': ''},
-    {'eng': ['naïveté', 'navete'], 'korMain': ['순진함', '소박함'], 'korAccept': [], 'mean': ''},
+    {'eng': ['naïveté', 'naivete'], 'korMain': ['순진함', '소박함'], 'korAccept': [], 'mean': ''},
     {'eng': ['naïve', 'naive'], 'korMain': ['순진해 빠진', '순진한'], 'korAccept': [], 'mean': ''},
     {'eng': ['vicious'], 'korMain': ['잔인한', '악(의)'], 'korAccept': [], 'mean': 'the vicious circle of poverty '},
     {'eng': ['regression'], 'korMain': ['퇴행'], 'korAccept': [], 'mean': ''},
