@@ -138,7 +138,7 @@ function main(words) {
             words[i].kor = words[i].korAccept.concat(words[i].korMain)
             if(ansType == 'eng')
                 for(j in words[i].eng) {
-                    words[i].eng[j] = words[j].eng[j].toLowerCase();
+                    words[i].eng[j] = words[i].eng[j].toLowerCase();
                 }
         }
 
