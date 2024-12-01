@@ -95,7 +95,7 @@ function main(words) {
 
         // 정답 확인
         inputAns = inputEl.value
-        if(ansType == 'eng') inputAns = inputAns.toLowerCase();
+        if(ansType == 'eng') inputAns = inputAns.toLowerCase().replace("'", "’").replace("`", "’");
         rightAns = words[index][ansType]
         words[index].submit = inputAns;
         console.log(rightAns, inputAns, words[index], ansType);
