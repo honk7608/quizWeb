@@ -95,6 +95,7 @@ function main(words) {
 
         // 정답 확인
         inputAns = inputEl.value
+        if(ansType = 'eng') inputAns = inputAns.toLowerCase();
         rightAns = words[index][ansType]
         words[index].submit = inputAns;
         if(rightAns.includes(inputAns)) {inputEl.className = "correct"; correctWords.push(words.splice(index, 1)[0]);}
@@ -135,6 +136,10 @@ function main(words) {
 
         for(i in words) {
             words[i].kor = words[i].korAccept.concat(words[i].korMain)
+            if(ansType == 'eng')
+                for(j in words[i].eng) {
+                    words[i].eng[j] = words[j].toLowerCase();
+                }
         }
 
         next();
