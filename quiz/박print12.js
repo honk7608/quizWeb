@@ -39,7 +39,7 @@ var words = [
     {"korAccept": [], "eng": ["complement"], "korMain": ["보완하다", "보충하다"], "mean": ""}, 
     {"korAccept": [], "eng": ["imaginary"], "korMain": ["상상의"], "mean": ""}, 
     {"korAccept": [], "eng": ["association"], "korMain": ["연상", "연합"], "mean": ""}, 
-    {"korAccept": ["이로운"], "eng": ["to one's advantage"], "korMain": ["~에게 이로운"], "mean": ""}, 
+    {"korAccept": ["이로운"], "eng": ["to one’s advantage"], "korMain": ["~에게 이로운"], "mean": ""}, 
     {"korAccept": [], "eng": ["interfere with"], "korMain": ["방해하다", "저해하다"], "mean": ""}, 
     {"korAccept": [], "eng": ["integrate"], "korMain": ["통합하다"], "mean": ""}, 
     {"korAccept": [], "eng": ["bewildering"], "korMain": ["당혹스러운"], "mean": ""}, 
