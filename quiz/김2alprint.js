@@ -11,7 +11,7 @@ var words = [{'eng': ['abstain'], 'korMain': ['자제하다', '삼가다'], 'kor
 {'eng': ['cardiovascular disease'], 'korMain': ['심혈관질환'], 'korAccept': [], 'mean': ''}, 
 {'eng': ['sophisticated'], 'korMain': ['정교한'], 'korAccept': [], 'mean': ''}, 
 {'eng': ['coronary'], 'korMain': ['관상동맥의'], 'korAccept': [], 'mean': ''}, 
-{'eng': ['mathodological'], 'korMain': ['방법론적인'], 'korAccept': [], 'mean': ''}, 
+{'eng': ['methodological'], 'korMain': ['방법론적인'], 'korAccept': [], 'mean': ''}, 
 {'eng': ['inflated'], 'korMain': ['부풀린'], 'korAccept': [], 'mean': ''}, 
 {'eng': ['sensible type'], 'korMain': ['현명한 사람'], 'korAccept': [], 'mean': ''}, 
 {'eng': ['liable to'], 'korMain': ['~할 가능성이 있다'], 'korAccept': [], 'mean': ''}, 
