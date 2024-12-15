@@ -24,7 +24,7 @@ var words = [
 {'eng': ['consistent'], 'korMain': ['일관된'], 'korAccept': [], 'mean': ''}, 
 {'eng': ['intend for'], 'korMain': ['~을 위해 의도하다'], 'korAccept': ['~를 위해 의도하다'], 'mean': ''}, 
 {'eng': ['pointed out'], 'korMain': ['지적하다'], 'korAccept': [], 'mean': ''}, 
-{'eng': ['regulation'], 'korMain': ['규 제'], 'korAccept': [], 'mean': ''}, 
+{'eng': ['regulation'], 'korMain': ['규제'], 'korAccept': [], 'mean': ''}, 
 {'eng': ['philanthropic'], 'korMain': ['박애주의의'], 'korAccept': [], 'mean': ''}, 
 {'eng': ['adapting to'], 'korMain': ['~에 적응하다'], 'korAccept': [], 'mean': ''}, 
 {'eng': ['keep up'], 'korMain': ['따라잡다'], 'korAccept': [], 'mean': ''}
