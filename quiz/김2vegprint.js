@@ -1,0 +1,33 @@
+var words = [
+    {'eng': ['alarming'], 'korMain': ['놀라운'], 'korAccept': [''], 'mean': 'worrying'}, 
+{'eng': ['boosting'], 'korMain': ['향상시키는'], 'korAccept': [''], 'mean': 'increasing or improving'}, 
+{'eng': ['concern'], 'korMain': ['걱정'], 'korAccept': [''], 'mean': 'a feeling of worry about something'}, 
+{'eng': ['crop'], 'korMain': ['농작물'], 'korAccept': [''], 'mean': 'a cultivated plant that is grown and harvested in large amounts'}, 
+{'eng': ['declining'], 'korMain': ['감소하는'], 'korAccept': [''], 'mean': 'gradually become smaller or less'}, 
+{'eng': ['plummeted'], 'korMain': ['급락하는'], 'korAccept': [''], 'mean': 'decreased rapidly'}, 
+{'eng': ['policies'], 'korMain': ['정책'], 'korAccept': [''], 'mean': 'ideas or plans used for making decisions, especially by businesses and governments'}, 
+{'eng': ['simultaneously'], 'korMain': ['동시에'], 'korAccept': [''], 'mean': 'at the same time'}, 
+{'eng': ['subsidies'], 'korMain': ['보조금'], 'korAccept': [''], 'mean': 'money given by the government to help something happen'}, 
+{'eng': ['supply'], 'korMain': ['공급'], 'korAccept': [''], 'mean': 'amount of a product or service that is available to customers'}, 
+{'eng': ['fellow'], 'korMain': ['동료'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['marked'], 'korMain': ['흔적이 남겨진', ' 눈에 띄는'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['stalk'], 'korMain': ['식물 줄기'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['biofortification'], 'korMain': ['식물 강화'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['agronomic'], 'korMain': ['농업과 관련된', ' 농업의'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['selective plant breeding'], 'korMain': ['선택적 식물 육종'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['variety'], 'korMain': ['품종'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['food security'], 'korMain': ['식량 안보'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['malnutrition'], 'korMain': ['영양 실조'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['funder'], 'korMain': ['투자자'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['invest'], 'korMain': ['투 자하다'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['accessibility'], 'korMain': ['접근성'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['consistent'], 'korMain': ['일관된'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['intend for'], 'korMain': ['~을 위해 의도하다'], 'korAccept': ['~를 위해 의도하다'], 'mean': ''}, 
+{'eng': ['pointed out'], 'korMain': ['지적하다'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['regulation'], 'korMain': ['규 제'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['philanthropic'], 'korMain': ['박애주의의'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['adapting to'], 'korMain': ['~에 적응하다'], 'korAccept': [''], 'mean': ''}, 
+{'eng': ['keep up'], 'korMain': ['따라잡다'], 'korAccept': [''], 'mean': ''}
+];
+
+main(words);
