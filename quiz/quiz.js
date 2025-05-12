@@ -156,7 +156,7 @@ function main(words) {
             <div class="correct"> ${correctWords.length} / ${allCnt}</div>
             <div class="wrong"> ${wrongWords.length} / ${allCnt}</div>
             <a id="end" href="../index.html">메인 화면으로 돌아가기</a>
-            ${(wrongWords.length)?"<button id='continue'>틀린 단어만 다시하기</button>":'SASA{T0o-MuCh_HOm3w0Rk}'}
+            ${(wrongWords.length)?"<button id='continue'>틀린 단어만 다시하기</button>":'SS{0-uhHmwR}AAToMC_O30k'}
         </div>`
         listText = 
         `<div class="list">
