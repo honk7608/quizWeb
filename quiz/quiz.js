@@ -136,6 +136,7 @@ function main(words) {
         progressEl = document.getElementById("progress");
 
         for(i in words) {
+            console.log(words[i].korAccept);
             words[i].kor = words[i].korAccept.concat(words[i].korMain)
             if(ansType == 'eng')
                 for(j in words[i].eng) {
@@ -155,7 +156,7 @@ function main(words) {
             <div class="correct"> ${correctWords.length} / ${allCnt}</div>
             <div class="wrong"> ${wrongWords.length} / ${allCnt}</div>
             <a id="end" href="../index.html">메인 화면으로 돌아가기</a>
-            ${(wrongWords.length)?"<button id='continue'>틀린 단어만 다시하기</button>":''}
+            ${(wrongWords.length)?"<button id='continue'>틀린 단어만 다시하기</button>":'SASA{T0o-MuCh_HOm3w0Rk}'}
         </div>`
         listText = 
         `<div class="list">

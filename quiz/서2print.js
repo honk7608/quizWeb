@@ -3,7 +3,7 @@ var words = [{'eng': ['manipulate'], 'korMain': ['조작하다'], 'korAccept': [
 {'eng': ['revolutionize'], 'korMain': ['(급격한) 변화를 가져오다'], 'korAccept': ['변화를 가져오다', '급격한 변화를 가져오다'], 'mean': ''},
 {'eng': ['sophisticated'], 'korMain': ['정교한'], 'korAccept': [], 'mean': ''},
 {'eng': ['algorithms'], 'korMain': ['알고리즘'], 'korAccept': [], 'mean': ''},
-{'eng': ['LiDAR'], 'korMain': ['빛 탐지 거리 및 측정'], 'korAccept': [], 'mean': 'LIght Detection And Ranging'},
+{'eng': ['LiDAR'], 'korMain': ['빛 탐지 및 거리 측정'], 'korAccept': [], 'mean': 'LIght Detection And Ranging'},
 {'eng': ['stereo'], 'korMain': ['입체 음향 (시스템)'], 'korAccept': ['입체 음향', '입체 음향 시스템'], 'mean': ''},
 {'eng': ['replicas'], 'korMain': ['복제본'], 'korAccept': [], 'mean': ''},
 {'eng': ['twins'], 'korMain': ['쌍둥이'], 'korAccept': [], 'mean': ''},
